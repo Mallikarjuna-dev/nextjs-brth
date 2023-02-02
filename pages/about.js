@@ -1,14 +1,15 @@
-import { useRouter } from "next/router";
+import { withRouter } from "next/router";
 
-const aboutPage = () => {
-  const router = useRouter();
+const aboutPage = (props) => {
+  // const router = useRouter();
+  console.log(props)
 
   return (
     <>
       <p>About Page</p>
-      <button onClick={() => router.push("/")}>Goto Home</button>
+      <button onClick={() => props.router.push("/")}>Goto Home</button>
     </>
   );
 };
 
-export default aboutPage;
+export default withRouter(aboutPage);
