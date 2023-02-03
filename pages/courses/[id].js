@@ -15,4 +15,28 @@ const WebDev = (props) => {
   );
 };
 
+export const getStaticProps = async (context) => {
+  console.log(context);
+  return {
+    props: {
+      id: context.params.id, 
+    },
+    // notFound: false,
+  };
+};
+
+export const getStaticPaths = async () => {
+  return {
+    paths: [
+      {
+        params: { id: "full-stack-dev" },
+      },
+      {
+        params: { id: "frontend-dev" },
+      },
+    ],
+    fallback: false,
+  };
+};
+
 export default withRouter(WebDev);

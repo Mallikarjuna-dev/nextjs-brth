@@ -17,7 +17,7 @@ export const getStaticProps = async () => {
     props: {
       courses: ["full stack", "frontend"],
     },
-    notFound: false,
+    // notFound: false,
   };
 };
 
