@@ -6,7 +6,8 @@ const Home = () => {
     <div>
       <h2>Home page</h2>
       <p>Pre - rendering</p>
-      {/* <Link href="/blogs">Blog page</Link> */}
+      <Link href="/users">User</Link>
+      <Link href="/posts">Posts</Link>
     </div>
   );
 };
