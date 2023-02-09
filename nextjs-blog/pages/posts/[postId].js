@@ -1,11 +1,11 @@
-//import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 const Post = ({ data }) => {
-  //const router = useRouter();
+  const router = useRouter();
 
-  // if (router.isFallback) {
-  //   return <p>Loading...</p>;
-  // }
+  if (router.isFallback) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <>
@@ -54,24 +54,8 @@ export async function getStaticPaths() {
   // });
 
   return {
-    paths: [
-      {
-        params: {
-          postId: "98",
-        },
-      },
-      {
-        params: {
-          postId: "99",
-        },
-      },
-      {
-        params: {
-          postId: "100",
-        },
-      },
-    ],
+    paths: [{ params: { postId: "1" } }],
     // paths,
-    fallback: "blocking",
+    fallback: true,
   };
 }
