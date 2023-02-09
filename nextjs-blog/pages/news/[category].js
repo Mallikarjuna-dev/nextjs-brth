@@ -1,7 +1,9 @@
-function ByCategory({ data }) {
+function ByCategory({ data, params }) {
   return (
     <div>
-      <h1>By Category</h1>
+      <h1>
+        By Category <i>{params.category}</i>
+      </h1>
       {data.map((el) => {
         return (
           <div key={el.id}>
@@ -30,6 +32,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       data,
+      params,
     },
   };
 }
