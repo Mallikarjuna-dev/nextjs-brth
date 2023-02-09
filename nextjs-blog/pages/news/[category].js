@@ -1,0 +1,35 @@
+function ByCategory({ data }) {
+  return (
+    <div>
+      <h1>By Category</h1>
+      {data.map((el) => {
+        return (
+          <div key={el.id}>
+            <h2>
+              {el.id} {el.title}
+            </h2>
+            <p>
+              {el.description} | {el.category}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export default ByCategory;
+
+export async function getServerSideProps(context) {
+  const { params } = context;
+  const res = await fetch(
+    `http://localhost:8080/news?category=${params.category}`
+  );
+  const data = await res.json();
+
+  return {
+    props: {
+      data,
+    },
+  };
+}

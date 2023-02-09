@@ -1,0 +1,30 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "arc 1",
+      "description": "desc 1",
+      "category": "sports"
+    },
+    {
+      "id": 2,
+      "title": "arco2",
+      "description": "desc 2",
+      "category": "politics"
+    },
+    {
+      "id": 3,
+      "title": "arc 3",
+      "description": "desc 3",
+      "category": "sports"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "pod 1",
+      "description": "desc 3",
+      "cat": "typicode"
+    }
+  ]
+}
