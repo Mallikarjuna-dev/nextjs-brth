@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 function Dashboard() {
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState("");
+  const [data, setData] = useState(null);
 
   const fetchData = async () => {
     try {
@@ -17,7 +17,7 @@ function Dashboard() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [setData]);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
