@@ -1,6 +1,7 @@
 import { comments } from "../../../data/comments";
 
 export default function handler(req, res) {
+  console.log("c", req.body);
   if (req.method === "GET") {
     res.status(200).json(comments);
   } else if (req.method === "POST") {

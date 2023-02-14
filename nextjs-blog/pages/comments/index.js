@@ -11,15 +11,20 @@ function CommentsPage() {
   };
 
   const handleSubmit = async () => {
-    const res = await fetch("api/comments", {
-      method: "POST",
-      body: JSON.stringify({ comment }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const data = await res.json();
-    console.log(data);
+    if (comment === "" || comment === " ") {
+      alert("Failed!,  Please enter a comment");
+    } else {
+      const res = await fetch("api/comments", {
+        method: "POST",
+        body: JSON.stringify({ comment }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      handleCom();
+      console.log(data);
+    }
   };
 
   const handleComment = async (commentId) => {
