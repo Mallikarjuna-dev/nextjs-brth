@@ -1,7 +1,16 @@
-const about = () => {
-  return (
-    <h2>About page</h2>
-  )
-}
+import Footer from "@/components/Footer";
 
-export default about
+const about = () => {
+  return <h2 className="content">About page</h2>;
+};
+
+export default about;
+
+about.getLayout = function pageLayout(page) {
+  return (
+    <>
+      {page}
+      <Footer />
+    </>
+  );
+};

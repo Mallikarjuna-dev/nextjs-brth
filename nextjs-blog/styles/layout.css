@@ -1,0 +1,18 @@
+.header {
+  font-size: 28px;
+  background: gray;
+  text-align: center;
+  padding: 30px;
+}
+
+.footer {
+  font-size: 28px;
+  background: gray;
+  text-align: center;
+  padding: 30px;
+}
+
+.content {
+  min-height: 90vh;
+  align-items: center;
+}

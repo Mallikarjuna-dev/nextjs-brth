@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 const Home = () => {
   return (
-    <div>
+    <div className="content">
       <h2>Home page</h2>
       <p>Pre - rendering</p>
       <Link href="/users">User</Link>
