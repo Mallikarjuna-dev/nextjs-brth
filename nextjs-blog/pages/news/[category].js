@@ -29,6 +29,11 @@ export async function getServerSideProps(context) {
   );
   const data = await res.json();
 
+  const user = process.env.DB_USER;
+  const password = process.env.DB_PASSWORD;
+
+  console.log(user, password);
+
   return {
     props: {
       data,
